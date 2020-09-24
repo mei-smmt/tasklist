@@ -1,8 +1,13 @@
-<h1>id: <%= @task.id %> のタスク詳細ページ</h1>
-
-<p><%= @task.content %></p>
-<p>ステータス: <%= @task.status %></p>
-
-<%= link_to '一覧に戻る', tasks_path %>
-<%= link_to 'タスクを編集する', edit_task_path %>
-<%= link_to 'タスクを削除する', @message, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+<div class="col-sm-6 offset-sm-3" >
+  <div class="card mb-3">
+    <div class="card-header">
+      Task
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><%= @task.content %></h5>
+    </div>
+  </div>
+    <p>Status---> <%= @task.status %></p>
+    <%= link_to 'Edit', edit_task_path, class: 'btn btn-info' %>
+    <%= link_to 'Delete', @message, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger'%>
+</div>
