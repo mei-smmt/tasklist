@@ -1,9 +1,6 @@
-<% if logged_in? %>
-  <!--<div class="center jumbotron">-->
     <div class="text-center">
       <%= link_to 'Create new task!', new_task_path, class: 'btn btn-lg btn-light btn-block mb-3' %>
     </div>
-  <!--</div>-->
 
   <div class="row">
   <aside class="col-sm-4">
@@ -38,11 +35,3 @@
   </div>
 </div>
 
-  
-<% else %>
-  <div class="center jumbotron">
-    <div class="text-center">
-      <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
-    </div>
-  </div>
-<% end %>
